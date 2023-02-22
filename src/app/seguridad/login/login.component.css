@@ -1,0 +1,119 @@
+.bg_user {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--azul-primario);
+    overflow-x: hidden;
+    display: grid;
+}
+
+.contain-login {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.contain-login img {
+    width: 350px;
+    height: auto;
+}
+
+.contain-login form {
+    border-left: 5px solid var(--dorado-secundario);
+    padding-left: 20px;
+    width: max-content;
+    height: max-content;
+    display: grid;
+    color: white;
+}
+
+.contain-login form :nth-child(2),
+:nth-child(5) {
+    margin-bottom: 20px;
+}
+
+.contain-login form label {
+    width: max-content;
+    height: max-content;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    color: var(--dorado-secundario);
+    font-weight: bold;
+}
+
+.contain-login form input {
+    width: 250px;
+    background-color: var(--azul-primario);
+    color: white;
+    border: 1px solid var(--dorado-secundario);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contain-login button {
+    width: 250px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: var(--dorado-secundario);
+    color: var(--azul-primario);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contain-login button:hover {
+    transform: scale(1.05);
+}
+
+.contain-login a {
+    color: white;
+    font-size: small
+}
+
+.contain-login a:hover {
+    color: var(--dorado-secundario);
+}
+
+.contain-login a:active {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .contain-login {
+        grid-template-columns: repeat(1, max-content);
+        grid-template-rows: repeat(2, max-content);
+        gap: 20px;
+    }
+
+    .contain-login form {
+        margin-block: 10px;
+        border-left: none;
+        text-align: center;
+    }
+
+    .contain-login img {
+        width: 250px;
+        height: auto;
+    }
+
+    .contain-login form label {
+        width: max-content;
+        height: max-content;
+        margin-bottom: 5px;
+        margin-inline: auto;
+        border-radius: 5px;
+        padding: 2px;
+        color: var(--dorado-secundario);
+        font-weight: bold;
+    }
+
+    .contain-login form button {
+        margin: 0 auto;
+    }
+}
