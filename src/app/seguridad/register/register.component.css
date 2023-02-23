@@ -1,0 +1,122 @@
+.bg_user {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--azul-primario);
+    overflow-x: hidden;
+    display: grid;
+}
+
+.contain-register {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+    width: max-content;
+    margin: 50px auto;
+}
+
+.contain-register img {
+    width: 350px;
+    height: auto;
+}
+
+.contain-register form {
+    border-left: 5px solid var(--dorado-secundario);
+    padding-left: 20px;
+    width: max-content;
+    height: max-content;
+    display: grid;
+    color: white;
+}
+
+.contain-register form :nth-child(2),
+:nth-child(4),
+:nth-child(6),
+:nth-child(8),
+:nth-child(10) {
+    margin-bottom: 20px;
+}
+
+.contain-register form label {
+    width: max-content;
+    height: max-content;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    color: var(--dorado-secundario);
+    font-weight: bold;
+}
+
+.contain-register form input {
+    width: 250px;
+    background-color: var(--azul-primario);
+    color: white;
+    border: 1px solid var(--dorado-secundario);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contain-register button {
+    width: 250px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: var(--dorado-secundario);
+    color: var(--azul-primario);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contain-register button:hover {
+    transform: scale(1.05);
+}
+
+.contain-register a {
+    color: white;
+    font-size: small
+}
+
+.contain-register a:hover {
+    color: var(--dorado-secundario);
+}
+
+.contain-register a:active {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .contain-register {
+        grid-template-columns: repeat(1, max-content);
+        grid-template-rows: repeat(2, max-content);
+        gap: 20px;
+    }
+
+    .contain-register form {
+        margin-block: 10px;
+        border-left: none;
+        text-align: center;
+    }
+
+    .contain-register img {
+        width: 250px;
+        height: auto;
+    }
+
+    .contain-register form label {
+        width: max-content;
+        height: max-content;
+        margin-bottom: 5px;
+        margin-inline: auto;
+        border-radius: 5px;
+        padding: 2px;
+        color: var(--dorado-secundario);
+        font-weight: bold;
+    }
+
+    .contain-register form button {
+        margin: 0 auto;
+    }
+}

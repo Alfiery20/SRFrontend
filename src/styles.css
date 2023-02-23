@@ -5,6 +5,6 @@
 }
 
 :root {
-    --azul-primario: #010B26;
-    --dorado-secundario: #F7D979;
+    --azul-primario: #000066 /* #4B0082 */;
+    --dorado-secundario: #ffd700;
 }
