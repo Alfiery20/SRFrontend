@@ -61,7 +61,7 @@
 
 .contain-register button {
     width: 250px;
-    margin: 0 auto;
+    margin-top: 25px;
     padding: 5px;
     background-color: var(--dorado-secundario);
     color: var(--azul-primario);
@@ -116,7 +116,4 @@
         font-weight: bold;
     }
 
-    .contain-register form button {
-        margin: 0 auto;
-    }
 }

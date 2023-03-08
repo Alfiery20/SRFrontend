@@ -1,26 +1,85 @@
 <div class="bg_user">
-    <div class="contain-register ">
-        <img src="../../../assets/imgs/Logo_Text_Dorado.png" alt="logo_sumaqrumi">
+  <div class="contain-register">
+    <img src="../../../assets/imgs/Logo_Text_Dorado.png" alt="logo_sumaqrumi" />
+    <form [formGroup]="formularioRegistro">
+      <!-- <label for="typeDocu">TipoDocumento</label>
+      <select formControlName="typeDocu" name="typeDocu" id="typeDocu">
+        <option value="">Pasaporte</option>
+      </select> -->
 
-        <form action="submit">
-            <label for="name">Nombres</label>
-            <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+      <label for="numDocu">Numero documento</label>
+      <input
+        [(ngModel)]="nuevoUsuario.numerDocumento"
+        formControlName="numDocu"
+        type="text"
+        name="numDocu"
+        id="numDocu"
+        placeholder="Ingrese su numero de documento"
+      />
 
-            <label for="lastName">Apellidos</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Ingrese sus apellidos">
+      <label for="name">Nombres</label>
+      <input
+        [(ngModel)]="nuevoUsuario.nombreCompleto"
+        formControlName="nombres"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Ingrese su nombre"
+      />
 
-            <label for="correo">Correo</label>
-            <input type="text" name="correo" id="correo" placeholder="Ingrese correo electrónico">
+      <label for="lastNameFathe">Apellido Paterno</label>
+      <input
+        [(ngModel)]="nuevoUsuario.apelliPaterno"
+        formControlName="apellidoPaterno"
+        type="text"
+        name="lastNameFathe"
+        id="lastNameFathe"
+        placeholder="Ingrese sus apellidos"
+      />
 
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" placeholder="Genere una contraseña">
-            
-            <label for="passwordValidate">Validar contraseña</label>
-            <input type="password" name="passwordValidate" id="passwordValidate" placeholder="Vuelva a ingresar su contraseña">
+      <label for="lastNameMother">Apellido Materno</label>
+      <input
+        [(ngModel)]="nuevoUsuario.apelliMaterno"
+        formControlName="apellidoMaterno"
+        type="text"
+        name="lastNameMother"
+        id="lastNameMother"
+        placeholder="Ingrese sus apellidos"
+      />
 
-            <button type="button">Registrar</button>
-            <a href="#" style="width: max-content; margin: 0 auto">Ya tengo cuenta</a>
+      <label for="correo" >Correo</label>
+      <input
+        [(ngModel)]="nuevoUsuario.correElectronico"
+        formControlName="correo"
+        type="email"
+        name="correo"
+        id="correo"
+        placeholder="Ingrese correo electrónico"
+      />
 
-        </form>
-    </div>
+      <label for="password">Contraseña</label>
+      <input
+        [(ngModel)]="nuevoUsuario.clave"
+        formControlName="password"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Genere una contraseña"
+      />
+
+      <label for="passwordValidate">Validar contraseña</label>
+      <input
+        formControlName="passwordValidate"
+        type="password"
+        name="passwordValidate"
+        id="passwordValidate"
+        placeholder="Vuelva a ingresar su contraseña"
+      />
+
+      <button (click)="registerUser()" type="submit">Registrar</button>
+      <a [routerLink]="''" style="width: max-content; margin: 0 auto"
+        >Ya tengo cuenta</a
+      >
+    </form>
+  </div>
 </div>
